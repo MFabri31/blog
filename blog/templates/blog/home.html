@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portada</title>
+
+    {% load bootstrap4 %} {% bootstrap_css %}
+  </head>
+  <body>
+    <h1 class="display-4">Bienvenido a mi blog!</h1>
+
+    <!-- templates tags -->
+    {% for post in posts %}
+    <div>
+      <h2>{{post.title}}</h2>
+      <p><a href="/blog/{{post.id}}">Leer más</a></p>
+    </div>
+    {% endfor %}
+  </body>
+</html>
+
+<!-- 
+Lógica de presentación
+
+
+ -->
